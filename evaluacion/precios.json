@@ -1,0 +1,6 @@
+{
+  "_fuente": "Azure Retail Prices API, eastus2, GlobalStandard, consultado el 2026-11-05. Precios de lista en USD; verifica los tuyos.",
+  "decision-1": {"entrada_usd_por_millon": 0.042, "salida_usd_por_millon": 0.042},
+  "gpt-55": {"entrada_usd_por_millon": 5.0, "salida_usd_por_millon": 30.0},
+  "gpt-54-mini": {"entrada_usd_por_millon": 0.75, "salida_usd_por_millon": 4.5}
+}

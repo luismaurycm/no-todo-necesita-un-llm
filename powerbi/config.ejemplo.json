@@ -1,0 +1,7 @@
+{
+  "workspace_id": "<id del área de trabajo de Power BI / Fabric>",
+  "sitio": "https://<tenant>.sharepoint.com/sites/<tu-sitio>",
+  "lista_id": "<id de la lista PQRS>",
+  "modelo": "Modelo PQRS",
+  "informe": "Tablero PQRS"
+}

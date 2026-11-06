@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.DS_Store
+*.log
+# configuración con los identificadores de tu tenant (parte de los config.ejemplo.json)
+power-automate/flujo/config.json
+powerbi/config.json
+# salidas generadas por los scripts
+power-automate/flujo/flujo_pqrs.json
+powerbi/definicion/
+resultados/cache_*.jsonl

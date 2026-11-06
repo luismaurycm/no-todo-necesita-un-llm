@@ -1,0 +1,16 @@
+{
+  "nombre": "PQRS · Decision-1 de punta a punta",
+  "entorno": "<id del entorno de Power Platform>",
+  "sitio": "https://<tenant>.sharepoint.com/sites/<tu-sitio>",
+  "lista_id": "<id de la lista PQRS: lo imprime sharepoint/crear_lista.js>",
+  "team_id": "<id del Team (groupId)>",
+  "canal_id": "<id del canal, 19:...@thread.tacv2>",
+  "api_conector": "<nombre del conector personalizado: lo imprime conector/crear_conector.py>",
+  "conexiones": {
+    "sharepoint": "<id de la conexión de SharePoint>",
+    "teams": "<id de la conexión de Teams>",
+    "decision": "<id de la conexión del conector de Decision-1>"
+  },
+  "umbral": 0.95,
+  "plazo_dias_habiles": 15
+}

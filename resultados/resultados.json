@@ -1,0 +1,264 @@
+{
+  "modelos": [
+    {
+      "modelo": "decision-1",
+      "n": 500,
+      "exactitud": {
+        "tipo": 0.93,
+        "area": 0.812,
+        "urgencia": 0.472,
+        "riesgo_juridico": 1.0,
+        "completa": 0.824
+      },
+      "urgencia_a_un_nivel": 0.908,
+      "todas_correctas": 0.746,
+      "tipo_macro": {
+        "precision": 0.963356369774855,
+        "recall": 0.9455542046015436,
+        "f1": 0.9543722772533412
+      },
+      "area_macro": {
+        "precision": 0.8781743417637238,
+        "recall": 0.8237833796197392,
+        "f1": 0.8501097507468195
+      },
+      "matriz_tipo": {
+        "peticion": {
+          "peticion": 122,
+          "queja": 0,
+          "reclamo": 26,
+          "sugerencia": 0,
+          "felicitacion": 0
+        },
+        "queja": {
+          "peticion": 0,
+          "queja": 89,
+          "reclamo": 6,
+          "sugerencia": 0,
+          "felicitacion": 0
+        },
+        "reclamo": {
+          "peticion": 0,
+          "queja": 2,
+          "reclamo": 177,
+          "sugerencia": 0,
+          "felicitacion": 0
+        },
+        "sugerencia": {
+          "peticion": 0,
+          "queja": 0,
+          "reclamo": 0,
+          "sugerencia": 33,
+          "felicitacion": 0
+        },
+        "felicitacion": {
+          "peticion": 1,
+          "queja": 0,
+          "reclamo": 0,
+          "sugerencia": 0,
+          "felicitacion": 44
+        }
+      },
+      "latencia_s": {
+        "p50": 0.5725709789949178,
+        "p95": 0.7858835829974851,
+        "media": 0.601010748431756
+      },
+      "tokens_por_pqrs": {
+        "entrada": 680.978,
+        "salida": 5.0
+      },
+      "costo_usd_por_1000_pqrs": 0.028811076
+    },
+    {
+      "modelo": "gpt-55",
+      "n": 500,
+      "exactitud": {
+        "tipo": 0.886,
+        "area": 0.838,
+        "urgencia": 0.444,
+        "riesgo_juridico": 1.0,
+        "completa": 0.828
+      },
+      "urgencia_a_un_nivel": 0.876,
+      "todas_correctas": 0.73,
+      "tipo_macro": {
+        "precision": 0.9439746671079305,
+        "recall": 0.9045174930885016,
+        "f1": 0.9238249615738524
+      },
+      "area_macro": {
+        "precision": 0.894100417220929,
+        "recall": 0.8382638147119561,
+        "f1": 0.8652822687743004
+      },
+      "matriz_tipo": {
+        "peticion": {
+          "peticion": 107,
+          "queja": 0,
+          "reclamo": 41,
+          "sugerencia": 0,
+          "felicitacion": 0
+        },
+        "queja": {
+          "peticion": 0,
+          "queja": 86,
+          "reclamo": 9,
+          "sugerencia": 0,
+          "felicitacion": 0
+        },
+        "reclamo": {
+          "peticion": 0,
+          "queja": 3,
+          "reclamo": 176,
+          "sugerencia": 0,
+          "felicitacion": 0
+        },
+        "sugerencia": {
+          "peticion": 0,
+          "queja": 0,
+          "reclamo": 0,
+          "sugerencia": 33,
+          "felicitacion": 0
+        },
+        "felicitacion": {
+          "peticion": 2,
+          "queja": 0,
+          "reclamo": 2,
+          "sugerencia": 0,
+          "felicitacion": 41
+        }
+      },
+      "latencia_s": {
+        "p50": 2.9378587914980017,
+        "p95": 5.123424124998564,
+        "media": 3.181795733159874
+      },
+      "tokens_por_pqrs": {
+        "entrada": 618.724,
+        "salida": 162.666
+      },
+      "costo_usd_por_1000_pqrs": 7.973600000000001
+    },
+    {
+      "modelo": "gpt-54-mini",
+      "n": 500,
+      "exactitud": {
+        "tipo": 0.944,
+        "area": 0.878,
+        "urgencia": 0.446,
+        "riesgo_juridico": 1.0,
+        "completa": 0.814
+      },
+      "urgencia_a_un_nivel": 0.864,
+      "todas_correctas": 0.824,
+      "tipo_macro": {
+        "precision": 0.9729468599033817,
+        "recall": 0.9591465149359886,
+        "f1": 0.965997401623331
+      },
+      "area_macro": {
+        "precision": 0.9261513090084519,
+        "recall": 0.8759665847753328,
+        "f1": 0.9003601839100027
+      },
+      "matriz_tipo": {
+        "peticion": {
+          "peticion": 124,
+          "queja": 0,
+          "reclamo": 24,
+          "sugerencia": 0,
+          "felicitacion": 0
+        },
+        "queja": {
+          "peticion": 0,
+          "queja": 91,
+          "reclamo": 4,
+          "sugerencia": 0,
+          "felicitacion": 0
+        },
+        "reclamo": {
+          "peticion": 0,
+          "queja": 0,
+          "reclamo": 179,
+          "sugerencia": 0,
+          "felicitacion": 0
+        },
+        "sugerencia": {
+          "peticion": 0,
+          "queja": 0,
+          "reclamo": 0,
+          "sugerencia": 33,
+          "felicitacion": 0
+        },
+        "felicitacion": {
+          "peticion": 0,
+          "queja": 0,
+          "reclamo": 0,
+          "sugerencia": 0,
+          "felicitacion": 45
+        }
+      },
+      "latencia_s": {
+        "p50": 1.2115833124989877,
+        "p95": 1.6764635420040577,
+        "media": 1.2930710443939462
+      },
+      "tokens_por_pqrs": {
+        "entrada": 618.724,
+        "salida": 36.644
+      },
+      "costo_usd_por_1000_pqrs": 0.628941
+    }
+  ],
+  "umbral_decision1": [
+    {
+      "umbral": 0.5,
+      "automatizado": 0.952,
+      "exactitud_automatizadas": 0.773109243697479,
+      "a_revision_humana": 0.04800000000000004
+    },
+    {
+      "umbral": 0.6,
+      "automatizado": 0.92,
+      "exactitud_automatizadas": 0.7869565217391304,
+      "a_revision_humana": 0.07999999999999996
+    },
+    {
+      "umbral": 0.7,
+      "automatizado": 0.882,
+      "exactitud_automatizadas": 0.8049886621315193,
+      "a_revision_humana": 0.118
+    },
+    {
+      "umbral": 0.8,
+      "automatizado": 0.826,
+      "exactitud_automatizadas": 0.8232445520581114,
+      "a_revision_humana": 0.17400000000000004
+    },
+    {
+      "umbral": 0.9,
+      "automatizado": 0.744,
+      "exactitud_automatizadas": 0.8709677419354839,
+      "a_revision_humana": 0.256
+    },
+    {
+      "umbral": 0.95,
+      "automatizado": 0.664,
+      "exactitud_automatizadas": 0.9066265060240963,
+      "a_revision_humana": 0.33599999999999997
+    },
+    {
+      "umbral": 0.98,
+      "automatizado": 0.584,
+      "exactitud_automatizadas": 0.9417808219178082,
+      "a_revision_humana": 0.41600000000000004
+    },
+    {
+      "umbral": 0.99,
+      "automatizado": 0.518,
+      "exactitud_automatizadas": 0.9536679536679536,
+      "a_revision_humana": 0.482
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Decision-1 PQRS (Foundry)",
+    "description": "Microsoft-Decision-1 y un modelo generativo de Microsoft Foundry para clasificar, redactar y evaluar PQRS. Autenticación delegada con Microsoft Entra ID.",
+    "version": "1.0"
+  },
+  "host": "<tu-recurso>.cognitiveservices.azure.com",
+  "basePath": "/",
+  "schemes": ["https"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/providers/microsoft/v1/systemone": {
+      "post": {
+        "operationId": "Decidir",
+        "summary": "Decidir con Decision-1",
+        "description": "Envía un estado (texto o JSON) y preguntas tipadas (noul, choice, score). Devuelve una decisión y sus probabilidades por pregunta.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "required": ["model", "state", "questions"],
+              "properties": {
+                "model": { "type": "string", "title": "Despliegue", "default": "decision-1", "x-ms-summary": "Despliegue" },
+                "state": { "type": "string", "title": "Estado", "x-ms-summary": "Estado (texto de la PQRS)" },
+                "questions": { "type": "object", "title": "Preguntas", "x-ms-summary": "Preguntas (JSON)" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Decisiones",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "model": { "type": "string" },
+                "answers": { "type": "object", "x-ms-summary": "Respuestas" },
+                "usage": { "type": "object", "properties": { "input_tokens": { "type": "integer" }, "output_tokens": { "type": "integer" } } }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/openai/v1/chat/completions": {
+      "post": {
+        "operationId": "Generar",
+        "summary": "Generar texto con un LLM",
+        "description": "Chat completions sobre un despliegue de Foundry (por ejemplo gpt-54-mini) para redactar el borrador de respuesta.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "required": ["model", "messages"],
+              "properties": {
+                "model": { "type": "string", "default": "gpt-54-mini", "x-ms-summary": "Despliegue" },
+                "messages": {
+                  "type": "array",
+                  "x-ms-summary": "Mensajes",
+                  "items": { "type": "object", "properties": { "role": { "type": "string" }, "content": { "type": "string" } } }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Respuesta del modelo",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "choices": {
+                  "type": "array",
+                  "items": { "type": "object", "properties": { "message": { "type": "object", "properties": { "content": { "type": "string", "x-ms-summary": "Texto generado" } } } } }
+                },
+                "usage": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "oauth2-auth": {
+      "type": "oauth2",
+      "flow": "accessCode",
+      "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
+      "tokenUrl": "https://login.windows.net/common/oauth2/authorize",
+      "scopes": {}
+    }
+  },
+  "security": [{ "oauth2-auth": [] }]
+}
