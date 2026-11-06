@@ -4,7 +4,8 @@
 // izquierda: haz clic y elige historico.json. Tarda uno o dos minutos.
 // El flujo NO procesa estas filas: su disparador ignora las que ya traen Tipo.
 (() => {
-  const W = _spPageContextInfo.webAbsoluteUrl;
+  // URL del sitio: https://<tenant>.sharepoint.com/sites/<sitio> (sirve en cualquier página del sitio)
+  const W = location.origin + ((location.pathname.match(/^\/(sites|teams)\/[^/]+/) || [""])[0]);
   const entrada = Object.assign(document.createElement("input"), { type: "file", accept: ".json" });
   Object.assign(entrada.style, { position: "fixed", top: "12px", left: "12px", zIndex: 99999, background: "#fff", padding: "8px" });
   document.body.appendChild(entrada);

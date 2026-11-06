@@ -4,7 +4,8 @@
 // crear listas, abre las herramientas de desarrollador (F12) → Consola, pega este archivo completo y pulsa Enter.
 // Es idempotente: si la lista o una columna ya existe, la deja como está.
 (async () => {
-  const W = _spPageContextInfo.webAbsoluteUrl;
+  // URL del sitio: https://<tenant>.sharepoint.com/sites/<sitio> (sirve en cualquier página del sitio)
+  const W = location.origin + ((location.pathname.match(/^\/(sites|teams)\/[^/]+/) || [""])[0]);
   const dig = (await (await fetch(W + "/_api/contextinfo", { method: "POST", headers: { Accept: "application/json;odata=nometadata" } })).json()).FormDigestValue;
   const H = { Accept: "application/json;odata=nometadata", "Content-Type": "application/json;odata=verbose", "X-RequestDigest": dig };
   const L = W + "/_api/web/lists/getbytitle('PQRS')";
